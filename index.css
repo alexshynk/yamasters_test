@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+*{
+	line-height: 1.5;
+}
+input[type="text"]{
+	height: 1.1em;
+}
+
+input[name="color2[]"]{
+	width: 50px;
+}
+

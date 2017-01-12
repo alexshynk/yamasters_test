@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yamasters_test</title>
+<link type="text/css" rel="stylesheet" href="index.css"/>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<h2 style="text-align: center; color: blue;">Сформировать шахматную доску</h2>
+Задание: <a href="https://docs.google.com/document/d/1t8FwYlvq58uk3KHonO3xAu30PoopvElNvW7Y67xDvk8/edit" target="_blank">https://docs.google.com/document/d/1t8FwYlvq58uk3KHonO3xAu30PoopvElNvW7Y67xDvk8/edit</a>
+<hr/>
+<form method="GET" action="make_chess.php">
+Ячеек по горизонтали (max=30): <input type="text" name="cols" value="8" onkeypress="return fsize_key(event)" onkeyup="fsize_change(event)"/><br>
+Ячеек по вертикали (max=30): <input type="text" name="rows" value="8" onkeypress="return fsize_key(event)" onkeyup="fsize_change(event)"/><br>
+Цвет: <br> 
+в формате (#cc0055)
+<input type="radio" name="color_type" value="1" checked onclick="fcolor_choose(1)"/> 
+<input type="text" name="color1" value="FF0000" onkeypress="return fcolor1_key(event)" onkeyup="fcolor1_change(event)"/>
+<br>
+в формате (rgb(255,255,255)) 
+<input type="radio" name="color_type" value="2" onclick="fcolor_choose(2)"/>
+<input type="text" name="color2[]" value="255" disabled onkeypress="return fcolor2_key(event)" onkeyup="fcolor2_change(event)"/>
+<input type="text" name="color2[]" value="0" disabled onkeypress="return fcolor2_key(event)" onkeyup="fcolor2_change(event)"/>
+<input type="text" name="color2[]" value="0" disabled onkeypress="return fcolor2_key(event)" onkeyup="fcolor2_change(event)"/>
+<br><br>
+<input type="submit" value="Сформировать шахматную доску"/>
+</form>
+
+<hr/>
+
+</body>
+</html>
